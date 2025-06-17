@@ -37,7 +37,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_databricks_project:
+    catalog: null  # <--- Esto evita que dbt intente usar Unity Catalog
     # Applies to all files under models/staging/
-    staging:
-      +materialized: table
-      +schema: staging
+    +staging:
+      materialized: table
+      schema: staging
+    +marts:
+      materialized: table
+      schema: marts
