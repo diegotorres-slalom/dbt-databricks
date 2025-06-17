@@ -1,0 +1,15 @@
+version: 2
+
+sources: 
+  - name: raw
+    database: raw
+    tables:
+      - name: album
+      - name: artist
+      - name: customer
+      - name: genre
+      - name: invoice
+      - name: invoice_line
+      - name: track
+
+        

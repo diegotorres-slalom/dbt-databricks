@@ -1,3 +1,3 @@
 select distinct Name 
-from {{source("raw",'artist')}}
+from raw.artist
 order by Name desc
